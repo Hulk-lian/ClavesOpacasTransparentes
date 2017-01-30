@@ -31,7 +31,7 @@ public class CifradoAES {
 		MessageDigest sha=MessageDigest.getInstance("SHA1");//hash sha1 
 		miClaveEnBytes=sha.digest(miClaveEnBytes);//ejecutacion del hash		
 		miClaveEnBytes=Arrays.copyOf(miClaveEnBytes,16);//usar solo los 16 primeros bytes por restricciones del algoritmo de encriptacion.
-		System.out.println("el hash sha1 de la clave es: "+DigestUtils.sha1Hex(miClaveEnBytes));//DigestUtils.sha1Hex(miClaveEnBytes));
+		//System.out.println("el hash sha1 de la clave es: "+DigestUtils.sha1Hex(miClaveEnBytes));//DigestUtils.sha1Hex(miClaveEnBytes));
 		
 		return new SecretKeySpec(miClaveEnBytes,cifrado);
 	}
